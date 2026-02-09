@@ -104,3 +104,14 @@ _reset: clean
     echo "Resetting before start..."
     -rm -r ./Pokemon_DS_Map_Studio
     -rm -r ./Pokemon_DS_Rom_Editor
+
+[group('clone')]
+clone-dreamCrystal ssh="true":
+    #!/usr/bin/env bash
+    cd ./Projects
+    if [ "{{ssh}}" = "true" ]; then
+        git clone git@github.com:Simsblock/Pokemon.Dream_Crystal.git
+    else
+        git clone https://github.com/Simsblock/Pokemon.Dream_Crystal.git
+    fi
+    git fetch origin

@@ -1,5 +1,12 @@
+# Tools
 Pokemon_DS_Map_Studio
 Pokemon_DS_Rom_Editor
+
+# Zips
 Pokemon.DS.Map.Studio-2.2.zip
 DSPRE.Reloaded.1.11.zip
 jre-8u281-linux-x64.tar.gz
+
+# Projects
+Projects/*
+!Projects/.gitkeep
