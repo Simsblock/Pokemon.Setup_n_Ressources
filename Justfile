@@ -3,9 +3,8 @@ JAVA_JRE_URL := "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=2528
 GITHUB_RELEASE_PK_DS_MAP_STUDIO := "https://github.com/Trifindo/Pokemon-DS-Map-Studio/releases/download/2.2/Pokemon.DS.Map.Studio-2.2.zip"
 JAVA_JRE_NAME := "jre-8u281-linux-x64.tar.gz"
 GITHUB_RELEASE_NAME_PK_DS_MAP_STUDIO := "Pokemon.DS.Map.Studio-2.2.zip"
-JRE_INSTALL_PATH := "/usr/lib/jre"
-LIB_PATH := "./Pokemon DS Map Studio-2.2/lib/"
-WINDOWS_EXECUTE_COMMAND := "start ./Pokemon DS Map Studio-2.2/bin/Pokemon DS Map Studio 2.2.exe"
+JRE_INSTALL_PATH := "/usr/lib/jvm"
+WINDOWS_EXECUTE_COMMAND := "start ./Pokemon_DS_Map_Studio/bin/Pokemon DS Map Studio 2.2.exe"
 
 [group('low_setup')]
 [linux]
@@ -51,7 +50,7 @@ _reset: clean
 [linux]
 run-map-studio:
     echo "Running Pokemon DS Map Studio on Linux..."
-    cd "{{ LIB_PATH }}" && {{ JRE_INSTALL_PATH }}/bin/java -jar "Pokemon DS Map Studio-2.2.jar"
+    cd ./Pokemon_DS_Map_Studio/Pokemon\ DS\ Map\ Studio-2.2/lib/ && {{ JRE_INSTALL_PATH }}/jre1.8.0_*/bin/java -jar "Pokemon DS Map Studio-2.2.jar"
 
 [group('execute')]
 [windows]
